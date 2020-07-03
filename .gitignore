@@ -51,3 +51,4 @@ settings.gradle
 .idea/
 .classpath
 .project
+bin
