@@ -1,0 +1,55 @@
+
+{{#partial "content"}}
+
+    
+    <div class="card" style="max-width: 400px;">
+
+        <div class="card-header">
+            Now create a character that will fight for justice 🦾
+        </div>
+
+        <div class="card-body">
+
+            <form action='/heros/new' method="POST">
+                
+                <div class="form-group mx-sm-5 mb-2">
+                    <label for="hero-naem">Hero's name</label>
+                    <input name="squad-name" class="form-control" type="text">
+                </div>
+                <div class="form-group mx-sm-5 mb-2">
+                    <label for="age">Age</label>
+                    <input name="max-number" class="form-control" type="number">
+                </div>
+            
+                <div class="form-group mx-sm-5 mb-2">
+                    <label for="strength">Strenght 😡</label>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="strength">
+                        <option selected >Choose...</option>
+                        <option value="1"> Energy Blasts</option>
+                        <option value="2"> Electric Manipulation</option>
+                        <option value="3"> Channel The Devil</option>
+                    </select>        
+                </div>
+                <div class="form-group mx-sm-5 mb-2">
+                        <label for="strength">Weakness 🥶</label>
+                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="weakness">
+                            <option selected >Choose...</option>
+                            <option value="1"> Lack of water</option>
+                            <option value="2">Running too fast</option>
+                            <option value="3"> Fake designer</option>
+                        </select>
+                </div>
+                <div class="form-group mx-sm-5 mb-2">
+                    <label for="age">Overall</label>
+                    <input name="max-number" class="form-control" type="number">
+                </div>
+
+
+                <button type="submit" class="btn btn-primary mx-sm-5 mb-2">Submit</button>
+            </form>
+
+        </div>
+    </div>
+{{/partial}}
+
+{{> layout.hbs}}
