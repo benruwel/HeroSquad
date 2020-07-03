@@ -1,6 +1,41 @@
-{{#partial "content"}}
-    <h1>The index page</h1>
 
+
+
+{{#partial "content"}}
+    
+    <div class="call-to-action">
+        <p>Start by creating</p>
+        <a href="/squads/new" class="btn btn-primary">New Squad</a>     
+        <p>then</p>
+        <a href="heros/new" class="btn btn-primary">New Hero</a>     
+    </div>
+    
+    <div class="squad-list">
+
+        <div class="card">
+            <p>Squad List</p>
+        </div>
+
+        <div class="card">
+
+            <div class="card-header">
+                Sqaud Name
+            </div>
+            <div class="card-body">
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn btn-primary">View Squad members</a>
+                <p>Number of members</p> 
+            </div>
+
+        </div>
+
+    </div>
+    
+    
 {{/partial}}
+
+
 
 {{> layout.hbs}}
