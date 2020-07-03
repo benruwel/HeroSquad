@@ -52,3 +52,5 @@ settings.gradle
 .classpath
 .project
 bin
+.settings
+
