@@ -3,6 +3,8 @@ body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
 }
 
 body {
@@ -14,6 +16,18 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+.template-content{
+    margin-top: 50px;
+}
+
+.title{
+    font-family: 'Bangers', cursive;
+    color: #455A64;
+    text-shadow: 3px 3px #263238;
+    letter-spacing: 5px;
+}
+
 
 .navbar {
     display: flex;
@@ -32,4 +46,12 @@ body {
 }
 .navbar a {
     margin-top: 0px;
+}
+
+.card{
+    margin-bottom: 10px;
+}
+
+.btn-group{
+    margin-bottom: 10px;
 }

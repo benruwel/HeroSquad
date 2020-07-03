@@ -2,37 +2,65 @@
 
 
 {{#partial "content"}}
-    
-    <div class="call-to-action">
-        <p>Start by creating</p>
-        <a href="/squads/new" class="btn btn-primary">New Squad</a>     
-        <p>then</p>
-        <a href="heros/new" class="btn btn-primary">New Hero</a>     
-    </div>
-    
-    <div class="squad-list">
 
-        <div class="card">
-            <p>Squad List</p>
+    {{#if username }}
+    
+        <div class="card" style="min-width : 600px">
+            <div class="card-body text-center">
+                <p>Hello <span class="font-weight-bold">{{ username }}</span> start by creating</p>
+            </div>
+        </div>
+        <div class="btn-group d-flex justify-content-center">
+            <a href="/squads/new" class="btn btn-secondary">New Squad</a>
+            <a href="heroes/new" class="btn btn-secondary">New Hero</a>
         </div>
 
-        <div class="card">
+        <div class="squad-list">
 
-            <div class="card-header">
-                Sqaud Name
+        {{#if squads }}
+
+            <div class="card" style="max-width : 800px">
+                <div class="card-body">
+                    <p class="text-center">Squad List</p>
+                </div>
             </div>
+
+            {{#each squads}}
+            <div class="card" style="max-width : 800px">
+                <div class="card-header">
+                    {{ squadName }}
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{ cause }}</p>
+                </div>
+                <div class="card-footer">
+                    <p>Members: <span class="badge badge-warning">{{ maxNumber }}</span></p>
+                    <a href="#" class="btn btn-warning">Squad</a>
+                </div>
+            </div>
+            {{/each}}
+        {{else }}
+            <div class="card text-centre" style="max-width : 800px">
+                <div class="card-body text-center">
+                <p>Create a squad 👆🏽</p>
+                </div>
+            </div>
+        {{/if }}
+        </div>
+    {{else }}
+        <div class="card" style="min-width : 600px ">
             <div class="card-body">
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            </div>
-            <div class="card-footer">
-                <a href="#" class="btn btn-primary">View Squad members</a>
-                <p>Number of members</p> 
-            </div>
+                <form action="/login" method="post">
+                    <div class="form-group">
+                        <input class="form-control" id="username" name="username" type="text" placeholder="Your name" >
+                    </div>
+                    <button class="btn btn-primary" type="submit">Login</button>
 
+                </form>
+            </div>
         </div>
 
-    </div>
-    
+    {{/if }}
     
 {{/partial}}
 
