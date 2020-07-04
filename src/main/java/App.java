@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import models.Squad;
@@ -17,7 +18,7 @@ public class App {
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             model.put("username", request.session().attribute("username"));
-            ArrayList<Squad> squads = Squad.getAll();
+            List<Squad> squads = Squad.getAll();
             model.put("squads", squads);
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
@@ -39,6 +40,8 @@ public class App {
         
         get("/heroes/new", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
+            List<Squad> squads = Squad.getAll();
+            model.put("squads", squads);
             return new ModelAndView(model, "new-hero.hbs");
         }, new HandlebarsTemplateEngine());
 
