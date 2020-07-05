@@ -10,14 +10,12 @@ public class Hero {
     private String mWeakness;
     private Integer mOverall;
 
-    public Hero(String name, Integer age, String squadName, String strength, String weakness, Integer overall) {
+    public Hero(String name, Integer age, String strength, String weakness, Integer overall) {
         this.mName = name;
         this.mAge = age;
         this.mStrength = strength;
         this.mWeakness= weakness;
         this.mOverall = overall;
-//        mSquad.addHeroToSquad(this);
-        this.mSquadName = squadName;
     }
 
     public String getSquadName() {

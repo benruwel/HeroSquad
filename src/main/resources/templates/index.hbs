@@ -7,7 +7,7 @@
     
         <div class="card" style="min-width : 600px">
             <div class="card-body text-center">
-                <p>Hello <span class="font-weight-bold">{{ username }}</span> start by creating</p>
+              Hello <span class="font-weight-bold">{{ username }}</span> start by creating:
             </div>
         </div>
         <div class="btn-group d-flex justify-content-center">
@@ -19,9 +19,9 @@
 
         {{#if squads }}
 
-            <div class="card" style="max-width : 800px">
-                <div class="card-body">
-                    <p class="text-center">Squad List</p>
+            <div class="card" style="max-width : 600px">
+                <div class="card-body text-center">
+                    Squad List
                 </div>
             </div>
 
@@ -34,8 +34,8 @@
                     <p class="card-text">{{ cause }}</p>
                 </div>
                 <div class="card-footer">
-                    <p>Members: <span class="badge badge-warning">{{ maxNumber }}</span></p>
-                    <a href="#" class="btn btn-warning">Squad</a>
+                    <p>Members: <span class="badge badge-warning">{{ numberOfHeroes }}</span> / <span class="badge badge-warning">{{ maxNumber }}</span></p>
+                    <a href="/squad/{{ id }}" class="btn btn-warning">Squad</a>
                 </div>
             </div>
             {{/each}}

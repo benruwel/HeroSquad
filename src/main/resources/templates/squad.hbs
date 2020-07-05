@@ -1,0 +1,33 @@
+{{#partial "content"}}
+
+        <div class="card" style="min-width : 600px">
+            <div class="card-body">
+                <p class="card-text text-center font-weight-bold">{{ thisSquad.squadName }} : "{{ thisSquad.cause }}"</p>
+            </div>
+        </div>
+        {{#if squadMembers }}
+            {{#each squadMembers}}
+                <div class="card">
+                    <div class="card-header"> <p class="card-text">{{ name }}</p></div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{ strength }}</li>
+                            <li class="list-group-item">{{ weakness }}</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <p class="card-text">Overall:<span class="badge badge-warning"> {{ overall }} </span> </p>
+                    </div>
+                </div>
+            {{/each}}
+         {{else }}
+            <div class="card">
+	            <div class="card-body">
+                    <p class="card-text">No members</p>
+                    <a href="/heroes/new" class="btn btn-warning">Create Hero</a>
+                </div>
+            </div>
+        {{/if}}
+{{/partial}}
+
+{{> layout.hbs}}

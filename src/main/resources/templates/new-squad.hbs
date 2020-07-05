@@ -2,9 +2,12 @@
 
 {{#partial "content"}}
 
-    <h1>Befor you start saving lives you need a squad with goals. Create your new squad!</h1>
 
-    <div class="card" style="max-width: 400px;">
+    <div class="card" style="min-width: 600px;">
+
+        <div class="card-header">
+	        <p class="card-text">Before you start saving lives you need a squad with goals. Create your new squad!</p>
+        </div>
 
         <div class="card-body">
             <form action='/squads/new' method="POST">
@@ -24,8 +27,6 @@
                 <button type="submit" class="btn btn-primary mb-2">Submit</button>
             </form>
         </div>
-        
-
     </div>
 {{/partial}}
 

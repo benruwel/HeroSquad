@@ -28,6 +28,12 @@ body {
     text-shadow: 3px 3px #263238;
     letter-spacing: 5px;
 }
+.title:hover{
+    font-family: 'Bangers', cursive;
+    color: #FAA307;
+    text-shadow: 3px 3px #D00000;
+    letter-spacing: 5px;
+}
 
 
 .navbar {

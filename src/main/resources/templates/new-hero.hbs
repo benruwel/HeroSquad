@@ -10,51 +10,52 @@
 
         <div class="card-body">
 
-            <form action='/heros/new' method="POST">
+            <form action='/heroes/new' method="POST">
                 
                 <div class="form-group mx-sm-5 mb-2">
-                    <label for="hero-naem">Hero's name</label>
-                    <input name="squad-name" class="form-control" type="text">
+                    <label for="hero-name">Hero's name</label>
+                    <input name="heroName" class="form-control" type="text">
                 </div>
                 <div class="form-group mx-sm-5 mb-2">
                     <label for="age">Age</label>
-                    <input name="max-number" class="form-control" type="number">
+                    <input name="age" class="form-control" type="number">
                 </div>
 
                 <div class="form-group mx-sm-5 mb-2">
                     <label for="strength">Squad</label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="strength">
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="squadName">
                     {{#if squads}}
                         {{#each squads}}
-                        <option selected >Choose</option>
-                        <option value="1">{{ squadName }}</option>
+                        <option selected >Choose squad</option>
+                        <option value="{{ id }}">{{ squadName }}</option>
                         {{/each}}
                     {{else }}
-
+                        <option label="Create squad first" ></option>
+                    {{/if }}
                     </select>
                 </div>
 
                 <div class="form-group mx-sm-5 mb-2">
-                    <label for="strength">Strenght 😡</label>
+                    <label for="strength">Strength 😡</label>
                     <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="strength">
                         <option selected >Choose...</option>
-                        <option value="1"> Energy Blasts</option>
-                        <option value="2"> Electric Manipulation</option>
-                        <option value="3"> Channel The Devil</option>
+                        <option value="Energy Blasts"> Energy Blasts</option>
+                        <option value=" Electric Manipulation"> Electric Manipulation</option>
+                        <option value="Channel The Devil"> Channel The Devil</option>
                     </select>        
                 </div>
                 <div class="form-group mx-sm-5 mb-2">
                         <label for="strength">Weakness 🥶</label>
                         <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="weakness">
                             <option selected >Choose...</option>
-                            <option value="1"> Lack of water</option>
-                            <option value="2">Running too fast</option>
-                            <option value="3"> Fake designer</option>
+                            <option value="Lack of water"> Lack of water</option>
+                            <option value="Running too fast">Running too fast</option>
+                            <option value="Fake designer"> Fake designer</option>
                         </select>
                 </div>
                 <div class="form-group mx-sm-5 mb-2">
-                    <label for="age">Overall</label>
-                    <input name="max-number" class="form-control" type="number">
+                    <label for="overall">Overall</label>
+                    <input name="overall" class="form-control" type="number">
                 </div>
 
 
