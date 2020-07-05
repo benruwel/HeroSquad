@@ -21,10 +21,6 @@ public class App {
             model.put("username", request.session().attribute("username"));
             List<Squad> squads = Squad.getAll();
             model.put("squads", squads);
-            if (squads.size() > 0) {
-                Integer numberOfHeroes = Squad.numberOfHeroes();
-                model.put("numberOfHeroes", numberOfHeroes);
-            }
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
 
@@ -55,11 +51,11 @@ public class App {
             Map<String, Object> model = new HashMap<>();
             String heroName = request.queryParams("heroName");
             Integer age = Integer.parseInt(request.queryParams("age"));
-            int squadName = Integer.parseInt(request.queryParams("squadName"));
             String strength = request.queryParams("strength");
             String weakness = request.queryParams("weakness");
             Integer overall = Integer.parseInt(request.queryParams("overall"));
-            Squad getSquad = Squad.findSquad(squadName);
+            int squadId = Integer.parseInt(request.queryParams("squadName"));
+            Squad getSquad = Squad.findSquad(squadId);
             Hero newHero = new Hero(heroName, age, strength, weakness, overall);
             getSquad.addHeroToSquad(newHero);
             response.redirect("/");

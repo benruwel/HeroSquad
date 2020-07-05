@@ -24,9 +24,9 @@
                 <div class="form-group mx-sm-5 mb-2">
                     <label for="strength">Squad</label>
                     <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="squadName">
+                        <option selected >Choose squad</option>
                     {{#if squads}}
                         {{#each squads}}
-                        <option selected >Choose squad</option>
                         <option value="{{ id }}">{{ squadName }}</option>
                         {{/each}}
                     {{else }}
@@ -59,7 +59,7 @@
                 </div>
 
 
-                <button type="submit" class="btn btn-primary mx-sm-5 mb-2">Submit</button>
+                <button type="submit" class="btn btn-warning mx-sm-5 mb-2">Submit</button>
             </form>
 
         </div>

@@ -3,6 +3,9 @@ package models;
 import org.junit.After;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class SquadTest {
@@ -29,4 +32,14 @@ public class SquadTest {
         assertEquals(expectedNumber, testSquad.getMaxNumber());
         assertEquals(expectedCause, testSquad.getCause());
     }
+    @Test
+    public void addHeroToSquad_addingArrayOfHeroes_ArrayList() {
+        Squad testSquad = new Squad("Suicide Squad", "dress to kill", 8);
+        Hero testHero = new Hero("Joker", 23, "laughter", "laughter", 100);
+        List<Hero> testHeroList = new ArrayList<>();
+        testHeroList.add(testHero);
+        testSquad.addHeroToSquad(testHero);
+        assertEquals(testHeroList, testSquad.getHeroList());
+    }
+
 }

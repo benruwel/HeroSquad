@@ -4,8 +4,6 @@ public class Hero {
 
     private String mName;
     private Integer mAge;
-    private Squad mSquad;
-    private String mSquadName;
     private String mStrength;
     private String mWeakness;
     private Integer mOverall;
@@ -16,10 +14,6 @@ public class Hero {
         this.mStrength = strength;
         this.mWeakness= weakness;
         this.mOverall = overall;
-    }
-
-    public String getSquadName() {
-        return mSquadName;
     }
 
     public String getName() {
