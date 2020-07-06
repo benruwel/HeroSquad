@@ -45,6 +45,9 @@ gradlew.bat
 gradlew
 settings.gradle
 
+# Heroku and Maven #
+target
+
 # IntelliJ #
 ############
 .idea
