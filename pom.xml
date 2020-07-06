@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.mycompany.app</groupId>
-    <artifactId>my-app</artifactId>
+    <groupId>com.moringa.hero-squad</groupId>
+    <artifactId>HeroSquad</artifactId>
     <version>1.0</version>
 
     <dependencies>
@@ -68,13 +68,13 @@
             <plugin>
                 <groupId>com.heroku.sdk</groupId>
                 <artifactId>heroku-maven-plugin</artifactId>
-                <version>0.4.4</version>
+                <version>3.0.2</version>
                 <configuration>
                     <jdkVersion>1.8</jdkVersion>
                     <!-- Change this to YOUR application name! -->
-                    <appName>hero-squad</appName>
+                    <appName>herosquad-benruwel</appName>
                     <processTypes>
-                        <web>java -jar target/my-app-1.0-jar-with-dependencies.jar</web>
+                        <web>java $JAVA_OPTS -cp target/classes:target/dependency/* App</web>
                     </processTypes>
                 </configuration>
             </plugin>

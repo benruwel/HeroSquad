@@ -22,6 +22,13 @@ public class Squad {
         this.heroList = new ArrayList<Hero>();
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public int getNumberOfHeroes() {
+        return numberOfHeroes;
+    }
 
     public String getSquadName() {
         return mSquadName;
